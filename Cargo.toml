@@ -1,0 +1,22 @@
+[package]
+name = "cloud"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1"
+base32 = "0.5"
+base64 = "0.22"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+clap = { version = "4", features = ["derive"] }
+config = { version = "0.15", default-features = false, features = ["yaml"] }
+dirs = "7"
+hmac = "0.12"
+otp = { git = "https://github.com/cgfork/otp" }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha1 = "0.10"
+
+[dev-dependencies]
+tempfile = "3"
